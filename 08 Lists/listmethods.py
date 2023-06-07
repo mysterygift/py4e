@@ -20,3 +20,19 @@ dir(t) # This lists all the methods available to 't', which is a list. You can a
 # .remove(x) - removes the first item in the list that is equal to x.
 # .reverse(x) - reverses the order of the list.
 # .sort(*, key=None, reverse=False) - sorts items of the list in ascending order.
+    # Because lists are mutable they can be sorted in place - you don't need to assign them to a new variable (unlike strings).
+
+# Write a program that allows users to input numbers until they enter 'done', and output the average.
+
+numlist = list() # Constructor sets up an empty list.
+PLAYERSTATE = True # I kept using == here instead of =. STUPID! It works now.
+while(PLAYERSTATE == True) : # Infinite loop.
+    inp = input('Enter a number: ') 
+    if (inp == 'done') or (inp == 'Done') : # Checks to see if user is finished.
+        PLAYERSTATE = False
+    else :
+        float_inp = float(inp) # As we will be calculating averages, need to user floating point.
+        numlist.append(float_inp) # Adds floating point value to the end of the list.
+
+average = sum(numlist) / len(numlist)
+print('Average:',average) # Comma automatically adds a space.
