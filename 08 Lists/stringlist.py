@@ -13,16 +13,3 @@ print(stuff[2]) # words.
 line = 'first;second;third;fourth'
 split_line = line.split(';') # Here ';' is the DELIMITER.
 print(split_line) # Prints ['first', 'second', 'third', 'fourth'].
-
-# Write code that parses mbox-short.txt and outputs the emails + a count of all the lines that start with 'From'.
-
-fhandle = open('mbox-short.txt', 'r')
-email_list = list()
-mailcount = 0
-for line in fhandle :
-    line.rstrip()
-    if line.startswith('From:') :
-        email_list.append(line[1])
-        mailcount = mailcount + 1
-    else :
-        continue
