@@ -1,4 +1,4 @@
-# This document will cover a key example of using a lambda expression to abbrieviate a much longer sorting algorithm.
+# This document will cover a key example of using list comprehension to abbrieviate a much longer sorting algorithm.
 # The following covers sorting the occurences of words from most to least used.
 
 fhand = open('romeo.txt')
@@ -22,6 +22,6 @@ for value, key in lst[:10] : # Print the first 10 values in the now sorted list.
 # without having to store it in a variable!
 
 c = {'a' : 10, 'b' : 1, 'c' : 22}
-print(sorted([(v, k) for k, v in c.items()], reverse = True)) # Here we define the data structure in sorted() instead of having to store it in a new variable. Lambda functions!
+print(sorted([(v, k) for k, v in c.items()], reverse = True)) # Here we define the data structure in sorted() instead of having to store it in a new variable. List comprehension!
 
 # [(1, 'b'), (10, 'a'), (22, 'c')]
