@@ -1,5 +1,6 @@
-# Regular expressions or regex/regexp, provides a concise and
-# flexible means for matching strings, such as particular chars, words, or patterns of chars.
+# Regular expressions or regex/regexp, provide a concise and flexible means
+# to match strings, such as particular chars, words, or patterns of chars.
+# Regex can be quite brittle code if you aren't specific enough with your search criteria (as in it breaks if data inputted deviates from a predicted format).
 
 # A regexp can be written in a formal language that can be interpreted by a regular expression processor.
 # Using them you can do smart searching/extraction.
@@ -19,6 +20,7 @@
 # [a-z0-9] - The set of chars can incl a range
 # ( - Indicates where a string extraction starts
 # ) - Where a string extraction ends
+# \ - Escape character. Put this before a special regex char to look for one. e.g. \$ will look for $'s.
 
 # You can use import re to bring in the regexp library.
 # re.search() checks if a string matches a regexp, similar to .find() for strings.
